@@ -11,8 +11,8 @@ def testNetpayLessEqualGrosspay(self):
 def testOvertimePayOvertimeHoursNotNegative(self):
    ee = et.Employee(12345,'Green','Joe',37,16,1.5,72,710)
    return_value = ee.computePayment(1,'31/10/2021')
-   self.assertEqual(0, return_value['Overtime Pay'])
-   self.assertEqual(0, return_value['Overtime Hours Worked'])
+   self.assertLessEqual(0, return_value['Overtime Pay'])
+   self.assertLessEqual(0, return_value['Overtime Hours Worked'])
    
 #Test Function for Regular Hours Worked cannot exceed hours worked
 def testRegHoursExceedHourswork(self):
