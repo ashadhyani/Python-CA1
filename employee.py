@@ -46,7 +46,8 @@ class Employee:
                 'Net Tax':Net_Tax, 
                 'PRSI': prsi,
                 'Net Deductions':Net_Deductions, 
-                'Net Pay': Net_Deductions
+                'Net Pay': Net_Deductions,
+                'Hours Worked':count_no-self.RegHours # Hours worked
                 }
 
             return return_val
